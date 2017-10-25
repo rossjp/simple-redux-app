@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/expect": "^1.20.2",
+    "@types/jest": "^21.1.5",
     "@types/react": "^16.0.18",
     "@types/react-dom": "^16.0.2",
     "@types/react-redux": "^5.0.10",
@@ -14,10 +15,12 @@
     "babel-loader": "^7.1.2",
     "expect": "^21.2.1",
     "html-webpack-plugin": "^2.30.1",
+    "jest": "^21.2.1",
     "path": "^0.12.7",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-redux": "^5.0.6",
+    "ts-jest": "^21.1.3",
     "tsconfig-paths": "^2.3.0",
     "tslint": "^5.8.0",
     "tslint-eslint-rules": "^4.1.1",
@@ -32,7 +35,21 @@
     "progress-bar-webpack-plugin": "^1.10.0",
     "ts-node": "^3.3.0"
   },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  },
   "scripts": {
-    "dev": "node -r tsconfig-paths/register -e \"require('./webpack-dev-server').startDevServer()\""
+    "dev": "node -r tsconfig-paths/register -e \"require('./webpack-dev-server').startDevServer()\"",
+    "test": "jest"
   }
 }

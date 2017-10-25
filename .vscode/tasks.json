@@ -1,0 +1,26 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [{
+      "type": "npm",
+      "script": "test",
+      "problemMatcher": []
+    },
+    {
+      "taskName": "runCurrentJestTest",
+      "type": "shell",
+      "command": "NODE_ENV=test ./node_modules/.bin/jest",
+      "args": [
+        "${relativeFile}"
+      ],
+      "group": "test",
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "dedicated"
+      }
+    }
+  ]
+}

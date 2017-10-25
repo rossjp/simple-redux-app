@@ -18,9 +18,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      //   { test: /\.js$/, loader: 'babel-loader', exclude: /node_modules/ },
-      //   { test: /\.jsx$/, loader: 'babel-loader', exclude: /node_modules/ },
-      { test: /\.ts*/, loader: 'awesome-typescript-loader', exclude: /node_modules/, query: { configFileName: './tsconfig.json' } }
+      { test: /\.ts$/, loader: 'awesome-typescript-loader', exclude: /node_modules/, query: { configFileName: './tsconfig.json' } },
+      { test: /\.tsx$/, loader: 'awesome-typescript-loader', exclude: /node_modules/, query: { configFileName: './tsconfig.json' } }
     ]
   },
   plugins: [

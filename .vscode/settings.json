@@ -1,0 +1,10 @@
+{
+  "macros": {
+    "runCurrentJestTest": [{
+        "command": "workbench.action.tasks.runTask",
+        "args": "runCurrentJestTest"
+      },
+      "workbench.action.terminal.scrollToBottom"
+    ]
+  }
+}
