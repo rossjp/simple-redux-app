@@ -1,22 +1,22 @@
 const createStore = (reducer: any) => {
-    let state: any;
-    let listeners: any = [];
+  let state: any;
+  let listeners: any = [];
 
-    const getState = () => state;
+  const getState = () => state;
 
-    const dispatch = (action: any) => {
-        state = reducer(state, action);
-        listeners.forEach((listener: any) => listener());
+  const dispatch = (action: any) => {
+    state = reducer(state, action);
+    listeners.forEach((listener: any) => listener());
+  };
+
+  const subscribe = (listener: any) => {
+    listeners.push(listener);
+    return () => {
+      listeners = listeners.filter((l: any) => l !== listener);
     };
+  };
 
-    const subscribe = (listener: any) => {
-        listeners.push(listener);
-        return () => {
-            listeners = listeners.filter((l: any) => l !== listener);
-        };
-    };
+  dispatch({});
 
-    dispatch({});
-
-    return { getState, dispatch, subscribe };
+  return { getState, dispatch, subscribe };
 };

@@ -1,15 +1,5 @@
+import { counterReducer } from "../src/reducer";
 import * as expect from "expect";
-
-export const counterReducer = (state: any = 0, action: any) => {
-  switch(action.type) {
-    case 'INCREMENT':
-      return state + 1;
-    case 'DECREMENT':
-      return state - 1;
-    default:
-      return state;
-  }
-};
 
 expect(
   counterReducer(0, { type: 'INCREMENT' })
@@ -27,7 +17,7 @@ expect(
   counterReducer(1, { type: 'DECREMENT' })
 ).toEqual(0);
 
-expect (
+expect(
   counterReducer(1, { type: 'UNKNOWN' })
 ).toEqual(1);
 
