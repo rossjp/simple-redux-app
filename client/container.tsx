@@ -2,7 +2,6 @@ import Counter from "./counter";
 import { connect, Dispatch } from "react-redux";
 
 const mapStateToProps = (state: any) => {
-  console.log("state=", state);
   return {
     value: state
   };

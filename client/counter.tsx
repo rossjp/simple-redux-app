@@ -10,7 +10,6 @@ export default class Counter extends React.Component <OwnProps, any> {
 
   constructor(props: OwnProps ) {
     super(props);
-    console.log(props);
   }
 
   render() {

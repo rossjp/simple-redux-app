@@ -1,17 +1,15 @@
 import * as expect from "expect";
 
-export const counterReducer = (state: any = 5, action: any) => {
-  console.log("reducing", state, action);
+export const counterReducer = (state: any = 0, action: any) => {
   switch(action.type) {
     case 'INCREMENT':
-      console.log("state+1=", state + 1);
       return state + 1;
     case 'DECREMENT':
       return state - 1;
     default:
       return state;
   }
-}
+};
 
 expect(
   counterReducer(0, { type: 'INCREMENT' })
