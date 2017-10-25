@@ -5,6 +5,12 @@
         "args": "runCurrentJestTest"
       },
       "workbench.action.terminal.scrollToBottom"
+    ],
+    "runAllJestTests": [{
+        "command": "workbench.action.tasks.runTask",
+        "args": "runAllJestTests"
+      },
+      "workbench.action.terminal.scrollToBottom"
     ]
   }
 }
