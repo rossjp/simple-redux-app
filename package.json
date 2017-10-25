@@ -50,6 +50,7 @@
   },
   "scripts": {
     "dev": "node -r tsconfig-paths/register -e \"require('./webpack-dev-server').startDevServer()\"",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   }
 }
